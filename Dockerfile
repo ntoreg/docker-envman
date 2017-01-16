@@ -4,4 +4,4 @@ RUN apk --no-cache --update add git build-base \
   && git clone https://github.com/dounokouno/ENV-Man.git
 WORKDIR ./ENV-Man
 RUN bundle install --path=vendor/bundle
-CMD ["bundle", "exec", "rackup", "-o", "0.0.0.0", "-p", "9292"]
+ENTRYPOINT ["bundle", "exec", "rackup", "-o", "0.0.0.0", "-p", "9292"]
